@@ -80,6 +80,8 @@ const last_name='Naibaho';
 const $message='Semangat belajarnya anak baik';
 const userId1=123;
 
+console.log(firstName,last_name,$message,userId1);
+
 
 //Contoh yang salah
 //const 1userid='123'; //SyntaxError: Invalid or unexpected token
