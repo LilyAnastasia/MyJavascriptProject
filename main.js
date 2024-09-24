@@ -91,3 +91,57 @@ console.log(firstName,last_name,$message,userId1);
 
 //3. Nama variable tidak boleh diawali dengan angka
 //const 1userid='123' //SyntaxError: Invalid or unexpected token
+
+/*Tanggal: 23 September 2024
+Hari belajar tentang Tipe data, Tipe data dalam Javasscript ada beberapa diantaranya string,number, boolean,dan null (tipe data dengan nilai kosong)
+Tipe data tersebut disebut sebagai tipe data primitif*/
+/*String
+string adalah tipe data yang nilainya berupa teks, biasa digunakan untuk data nama, alamat, email dan lain"
+Biasanya nilai dari tipe data string diapit oleh 2 tanda kutip, tanda kutip dalam js untuk menggambarkan 
+data tipe string ini ada 3 jenis yaitu kutip dua ("")/double quote, kutip satu('')/single quote, dan tanda backtikcs (``)
+contoh:*/
+let tulisan="Ini adalah Javascript";
+tulisan='Ini adalah Javascript';
+tulisan=`Ini adalah Javascript`;
+/*Hampir semua character bisa ditulis langsung dalam diantara tanda kutip, namun beberapa diantaranya memerlukan perlakuan khusus 
+misalnya baris baru (untuk menggambarkan kita sedang menekan button enter pada keyboard). Baris baru hanya dapat dituliskan langsung dengan 
+menggunakan kutip backticks, untuk kutip tunggal dan dua perlu ada tambahan \n seperti ini*/
+
+let baris="Baris Pertama \nBaris Kedua";
+baris='Baris satu \nBaris Kedua';
+baris=`Baris satu 
+Baris Dua`;
+
+/*Selain itu kutip Backticks ini disebut template literal dimana memungkinkan kita untuk menyisipkan javascript expression  untuk
+membentuk nilai string menggunakan character ${}*/
+const currentYear= new Date().getFullYear();
+const text=`Sekarang adalah tahun ${currentYear}`;
+
+console.log(text);
+/* tipe data number
+semua data yang berupa angka dipresentasikan dengan tipe data number, baik itu bilangan bulat atau pecahan.
+Dengan tipe data number maka kita hanya perlu menuliskan angkanya saja tanpa ada karakter khusus
+Berikut contoh nilai dalam javascript*/
+let angka=40;
+angka=3.333;
+angka=3;
+/*selain angka normal, tipe data number juga memiliki nilai spesial , infinity dan NaN
+Nilai infinity jika melakukan operasi aritmatika yang nilainya tidak terdefinisi, misal pembagian dengan angka 0*/
+const hasil=50/0;
+console.log(hasil);//Ouputnya infinity
+
+/*sedangkan NaN(Not a Number) dihasilkan ketika nilai non numerik diubah tipe datanya ke tipe data number
+contohnya mengubah nilai string menjadi number , maka akan muncul outputnya NaN*/
+const result=Number('dicoding');
+console.log(result);//Outputnya NaN
+
+/*Boolean
+boolean adalah tipe data yang hanya punya dua nilai yaitu True and False , biasanya untuk mereprestasikan nilai ya dan tidak*/
+const completed=true;
+const failed=false;
+console.log(completed, failed);
+//selain itu boolean juga bisa dihasilkan dengan penggunaan operator perbandingan pada matematika 
+const isGreater = 5>2;
+const isLess=5<2;
+const isSame=5<=5;
+console.log(isGreater,isLess,isSame);
