@@ -145,3 +145,34 @@ const isGreater = 5>2;
 const isLess=5<2;
 const isSame=5<=5;
 console.log(isGreater,isLess,isSame);
+
+/*Nilai kosong atau NULL
+Dalam javascript untuk menunjukkan bahwa sebuah variabel tidak memiliki nilai dapat menggunakan 2 nilai ini
+yaitu null dan undefined. Tidak hanya di javascript null juga di semua bahasa pemograman memberikan pengertian bahwa
+variable tersebut tidak memiliki nilai. Untuk memberikan nilai null dapat dilakukan dengan menulis sintaks "null"
+contoh*/
+let message=null;
+console.log(message);//Outputnya : null
+
+/*sedangkan undefined menggambarkan bahwa variable tersebut tidak menginisialisasi nilai apapun
+Misal:*/
+let pesan;
+console.log(pesan);//outputnya undefined
+
+/*terlihat sama , undefined dan null memang memiliki kesamaan kegunaan yaitu memberikan nilai kosong pada suatu
+variable, namun keduanya sebenarnya berbeda
+Contoh:*/
+const Baca1={first:'Dicoding',second:null};
+const Baca2={first:'Dicoding',second:undefined};
+console.log(JSON.stringify(Baca1));//Output: {"first":"Dicoding","second":null}
+
+console.log(JSON.stringify(Baca2));//Output: {"first":"Dicoding"}
+
+/*dari dua contoh tersebut terlihat bahwa undefined tidak ditampilkan ketika diubah ke bentuk JSON karena undefined ini tidak
+didukung oleh JSON, oleh karena itu mengapa null lebih standard digunakan*/
+
+//Mengubah Nilai Antar tipe data
+//Ketika mengelola data dengan JS dibutuhkan kondisi dimana kita perlu mengubah nilai dari suatu tipe data ke tipe data lain
+//Kita perlu menyesuaikan tipe data untuk kebutuhan tertentu atau konteks tertentu seperti perhitungan, perbandingan, dan manipulasi
+//data. Dalam JS hal ini dapat dilakukan, dengan mengkoversi tipe data dan itu dapat mempermudah developer untuk menuliskan kode program yang efisien
+
