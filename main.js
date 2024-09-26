@@ -171,8 +171,47 @@ console.log(JSON.stringify(Baca2));//Output: {"first":"Dicoding"}
 /*dari dua contoh tersebut terlihat bahwa undefined tidak ditampilkan ketika diubah ke bentuk JSON karena undefined ini tidak
 didukung oleh JSON, oleh karena itu mengapa null lebih standard digunakan*/
 
-//Mengubah Nilai Antar tipe data
-//Ketika mengelola data dengan JS dibutuhkan kondisi dimana kita perlu mengubah nilai dari suatu tipe data ke tipe data lain
-//Kita perlu menyesuaikan tipe data untuk kebutuhan tertentu atau konteks tertentu seperti perhitungan, perbandingan, dan manipulasi
-//data. Dalam JS hal ini dapat dilakukan, dengan mengkoversi tipe data dan itu dapat mempermudah developer untuk menuliskan kode program yang efisien
+/*Mengubah Nilai Antar tipe data
+Ketika mengelola data dengan JS dibutuhkan kondisi dimana kita perlu mengubah nilai dari suatu tipe data ke tipe data lain
+Kita perlu menyesuaikan tipe data untuk kebutuhan tertentu atau konteks tertentu seperti perhitungan, perbandingan, dan manipulasi
+data. Dalam JS hal ini dapat dilakukan, dengan mengkoversi tipe data dan itu 
+dapat mempermudah developer untuk menuliskan kode program yang efisien.
+JS itu punya berbagai macam cara untuk mengkonversikan tipe data, sebagai developer penting untuk kita memahami cara konversi tipe data 
+dgn tujuan supaya kita dapat menuliskan kode program yang efisien
+*/
+/*Konversi Eksplisit
+sintaks yang terlihat jelas  untuk mengonversi nilai dari sebuah variable dari tipe data satu ke tipe data lainnya dan sering
+digunakan oleh developer
 
+A. Mengubah ke String
+untuk mengubah suatu nilai ke string, dapat dilakukan dengan 2 cara yaitu fungsi string() atau .toString()
+contoh
+*/
+const number1 = 123;
+const boolean=true;
+const strNumber=String(number1);
+const strBoolean=boolean.toString();
+
+console.log(strNumber);//Output: 123;
+console.log(strBoolean);//output: "true"
+/*ketika ingin mengubah suatu nilai ke string dengan menggunakan function String()->ada nama variable yang akan diubah di dalam kurung
+misal String(number1);
+Untuk toString() function adalah metode yang tersedia dalam beberapa tipe data termasuk boolean yang digunakan untuk mengubah
+nilai string sesuai dengan referensi nilainya
+misal: boolean.toString();
+*/
+
+/*Mengubah ke Number
+untuk mengubah nilai ke bentuk numerik, dapat dilakukan dengan menggunakan function Number()
+contoh*/
+const strFloat='3.14';
+const angka2='23';
+const boolean1=false;
+
+const stringToNum=Number(angka2);
+const stringToFloat=Number(strFloat);
+const booleanToNum=Number(boolean1);
+
+console.log(stringToNum);
+console.log(stringToFloat);
+console.log(booleanToNum);
