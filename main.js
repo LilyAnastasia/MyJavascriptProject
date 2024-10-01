@@ -194,7 +194,8 @@ const strBoolean=boolean.toString();
 
 console.log(strNumber);//Output: 123;
 console.log(strBoolean);//output: "true"
-/*ketika ingin mengubah suatu nilai ke string dengan menggunakan function String()->ada nama variable yang akan diubah di dalam kurung
+/*26/09/2024
+ketika ingin mengubah suatu nilai ke string dengan menggunakan function String()->ada nama variable yang akan diubah di dalam kurung
 misal String(number1);
 Untuk toString() function adalah metode yang tersedia dalam beberapa tipe data termasuk boolean yang digunakan untuk mengubah
 nilai string sesuai dengan referensi nilainya
@@ -215,3 +216,71 @@ const booleanToNum=Number(boolean1);
 console.log(stringToNum);
 console.log(stringToFloat);
 console.log(booleanToNum);
+
+/*selain menggunakan number , function parseInt() juga dapat digunakan untuk ubah tipe data string ke angka
+Fungsi ini memiliki kemampuan untuk membaca karakter satu per satu. Ketika menemukan karakter yang tidak bisa
+ diubah menjadi angka, proses konversi terhenti di sana . Dengan kemampuan ini maka dapat mengubah nilai string 
+ "20CM" dan "64PX"
+ */
+const cm='20CM';
+const px='64PX';
+
+const stringToCm=parseInt(cm);
+const stringToPx=parseInt(px);
+
+console.log(stringToCm);
+console.log(stringToPx);
+
+//Adapun fungsi parseFloat() digunakan untuk mengonversi string menjadi angka desimal (floating-point number). 
+const cm2='20.55cm';
+const px2='64.23px';
+
+const floatFromCM = parseFloat(cm2);
+const floatFromPX = parseFloat(px2);
+
+console.log(floatFromCM);
+console.log(floatFromPX);
+
+
+/*Mengubah nilai ke boolean
+mengubah suatu nilai ke tipe boolean , kita bisa gunakan function boolean()
+*/
+const number001=123;
+const string001='Dicoding';
+const empty =null;
+
+const boolFromNumber = Boolean(number001);
+const boolFromString = Boolean(string001);
+const boolFromNull = Boolean(empty);
+
+console.log(boolFromNull);
+console.log(boolFromNumber);
+console.log(boolFromNumber);
+/*Hampir seluruh nilai yang ada sifatnya truthy, hanya segelintir nilai yang sifatnya falsy. Berikut adalah daftar nilai falsy dalam JavaScript.
+false
+0
+-0
+0n
+''
+null
+undefined
+NaN*/
+
+/*Konversi Implisit
+Konversi implisit terjadi ketika JavaScript secara otomatis mengubah tipe data tanpa instruksi eksplisit dari programmer. 
+Ini biasanya terjadi dalam konteks tertentu, seperti operasi aritmetika, perbandingan, dan konteks logika.*/
+const umur1=20;
+const pesan1='Umurku '+umur1;
+console.log(pesan1);
+/*Dalam contoh ini, tipe data number (age) secara otomatis dikonversi menjadi string karena operator + digunakan untuk penggabungan string.*/
+const strNumber1='123';
+const hasilnya=strNumber1 * 2;
+
+console.log(hasilnya);
+
+/*Dalam contoh ini, strNumber (yang merupakan string) dikonversi menjadi number karena operator * digunakan untuk operasi aritmetika.
+contoh lain yaitu penggunaan operasi aritmatika untuk mengubah boolean menjadi number*/
+
+const bool1=true;
+const hasil2=bool1+1;
+console.log(hasil2);
